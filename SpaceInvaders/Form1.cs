@@ -14,9 +14,7 @@ namespace SpaceInvaders
 {
     public partial class Form1 : Form
     {
-        private int Points = 0;
         private Jogo NovoJogo;
-        private GerenciadorColisoes colisoes;
 
         /// OTIMIZA AS IMAGENS PARA O JOGO PODER FICAR RODANDO MELHOR
         protected override CreateParams CreateParams
@@ -40,7 +38,6 @@ namespace SpaceInvaders
         {
 
             NovoJogo = new Jogo();
-            colisoes = new GerenciadorColisoes();
             NovoJogo.Comecar_Jogo(this.ClientSize.Width, this.ClientSize.Height);
             PointsTxtBox.Text = "0";
             
@@ -63,7 +60,6 @@ namespace SpaceInvaders
                 }
             }
 
-            this.Points = 0;
         }
 
 

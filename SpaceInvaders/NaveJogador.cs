@@ -67,13 +67,11 @@ namespace SpaceInvaders
                 case Keys.Left:
                     if (Get_Foto().Location.X >= 0)
                         Get_Foto().Location = new Point(Get_Foto().Location.X - Velocidade, Get_Foto().Location.Y);
-                    Console.WriteLine("PENIS");
                     break;
 
                 case Keys.Right:
                     if (Get_Foto().Location.X <= Borda)
                         Get_Foto().Location = new Point(Get_Foto().Location.X + Velocidade, Get_Foto().Location.Y);
-                    Console.WriteLine("SINEP");
                     break;
 
                 case Keys.Space:

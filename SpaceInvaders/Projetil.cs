@@ -63,14 +63,5 @@ namespace SpaceInvaders
             return false;
         }
       
-        public void Atira()
-        {
-            while (Get_PosY() > 0)
-            {
-                Set_PosY(Get_PosY() + Get_Velocidade());
-            }
-
-            Get_Foto().Visible = false;
-        }
     }
 }
