@@ -85,7 +85,7 @@ namespace SpaceInvaders
                 int gapX = 20;
                 int gapY = 20;
 
-                while (jogoAtual.Status_Jogo() == true)
+                while (jogoAtual.Get_JogoAtivo() == true)
                 {
                     bool borda = false;
 
@@ -93,7 +93,7 @@ namespace SpaceInvaders
                     {
                         // ---------------- MOVIMENTO DOS ALIENS ---
 
-                        if (jogoAtual.Status_Jogo() == false) return;
+                        if (jogoAtual.Get_JogoAtivo() == false) return;
                         foreach (Alien alien in jogoAtual.Get_Aliens())
                         {
                             if ((alien.Get_Foto().Location.X + alien.Get_Foto().Size.Width >= this.ClientSize.Width && gapX > 0) ||
@@ -135,11 +135,11 @@ namespace SpaceInvaders
                 Random sorteio = new Random();
                 List<Projetil> tirosAliens = new List<Projetil>();
 
-                while (jogoAtual.Status_Jogo() == true)
+                while (jogoAtual.Get_JogoAtivo() == true)
                 {
                     this.Invoke(new Action(() =>
                     {
-                        if (jogoAtual.Status_Jogo() == false) return;
+                        if (jogoAtual.Get_JogoAtivo() == false) return;
 
                         // -------------------------- TIROS INIMIGOS ---
                         if (sorteio.Next(0, 150) < 10 && jogoAtual.Get_Aliens().Count > 0)
@@ -234,7 +234,7 @@ namespace SpaceInvaders
 
                     }));
 
-                    if (jogoAtual.Status_Jogo() == false)
+                    if (jogoAtual.Get_JogoAtivo() == false)
                     {
                         break;
                     }
